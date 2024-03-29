@@ -73,7 +73,7 @@ bookRouter.get("/:id", getBook, async (req, res) => {
 });
 
 //Actualizar un libro
-bookRouter.put("/:id", getBook, async (req, res) => {
+bookRouter.put("/:id", async (req, res) => {
   try {
     const updatedBook = await res.book;
     updatedBook.title = req.body.title || updatedBook.title;
