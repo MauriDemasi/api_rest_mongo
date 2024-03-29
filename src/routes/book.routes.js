@@ -73,9 +73,10 @@ bookRouter.get("/:id", getBook, async (req, res) => {
 });
 
 //Actualizar un libro
-bookRouter.put("/:id", async (req, res) => {
+bookRouter.put("/:id", getBook, async (req, res) => {
   try {
-    const updatedBook = await res.book;
+    const updatedBook = res.book;
+    console.log("Encontró?", updatedBook);
     updatedBook.title = req.body.title || updatedBook.title;
     updatedBook.author = req.body.author || updatedBook.author;
     updatedBook.genre = req.body.genre || updatedBook.genre;
