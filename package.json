@@ -2,10 +2,10 @@
   "name": "api-rest-mongo",
   "version": "0.0.1",
   "description": "Realizamos una api rest con un CRUD usando mongoDB",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node src/app.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "author": "Mauri Demasi",
   "license": "ISC",

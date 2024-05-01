@@ -24,6 +24,13 @@ const getBook = async (req, res, next) => {
   next();
 };
 
+//Endpoint de prueba
+bookRouter.get("/test", (req, res) => {
+  res.json({
+    message: "Hello World",
+  });
+});
+
 //Obtener todos los libros
 bookRouter.get("/", async (req, res) => {
   try {
