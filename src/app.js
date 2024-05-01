@@ -12,7 +12,10 @@ const app = express();
 app.use(bodyParser.json());
 
 //Conectar a la base de datos de Mongoose
-mongoose.connect(process.env.MONGO_URL, { dbName: process.env.MONGO_DB_NAME });
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 const db = mongoose.connection;
 
 app.use("/books", bookRouter);
