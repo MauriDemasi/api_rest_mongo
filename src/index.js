@@ -17,13 +17,6 @@ const db = mongoose.connection;
 
 app.use("/books", bookRouter);
 
-app.get(
-  "/",
-  ({ req, res } = res.status(200).json({
-    message: "Hello World",
-  }))
-);
-
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
